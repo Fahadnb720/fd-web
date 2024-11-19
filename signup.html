@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin:0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(27deg ,rgb(233, 169, 169),rgba(155, 105, 140, 0.589)50%,rgb(218, 174, 218));
+
+            background-size: cover;
+            height: 95vh;
+        }
+
+        .form-container {
+            display: block;
+            margin: 50px auto;
+            background: rgba(241, 237, 237, 0.5);
+            padding: 20px;
+            width: 500px;
+            border: 5px solid rgb(0, 0, 0);
+            border-radius: 20px;
+        }
+
+        h2{
+            text-align: center;
+            padding: 10px;
+            color: rgb(11, 14, 11)
+        }
+
+
+        .form-container label{
+            display: block;
+            margin: 10px 0px;
+        }
+
+        input{
+            width: 100%;
+            height: 2rem;
+            padding: 5px;
+            border: 1px solid rgb(14, 13, 13);
+            border-radius: 5px;
+        }
+
+        form button {
+            display: block;
+            width: 30%;
+            height: 2rem;
+            text-align: center;
+            margin: 20px 160px;
+            border: 2px solid white;
+            border-radius: 10px;
+            justify-self: center;
+            box-shadow: 3px 3px 5px rgb(103, 103, 103),5px 5px 5px rgb(255, 255, 255) inset;
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        p a {
+            text-decoration: none;
+            color: green;
+        }
+
+    </style>
+    <title>InitRabbit - Login</title>
+</head>
+<body>
+    <div class="form-container">
+
+        <form action="submit" class="sign-up-form">
+            <h2>SIGN IN to Channel</h2>
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter your full name">
+            <label for="email">Email Id</label>
+            <input type='email' placeholder="Enter your email Id"></input>
+            <label for="password">Enter your password</label>
+            <input type='password' placeholder="Enter your password"></input>
+            <label for="password">Confirm your password</label>
+            <input type='password' placeholder="password"></input>
+            <button>Sign-Up</button>
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+        </form>
+        
+        
+    </div>
+    
+
+</body>
+</html>
