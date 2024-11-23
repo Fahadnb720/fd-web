@@ -5,61 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    body{
-        text-align: justify;
-        margin: 20px;
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meals of the Day</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      columns: 3;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    p{
-        text-indent: 20px;
+    .heading{
+        display: block;
+    } 
+    .meal-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;}
+      
+    .meal-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: 5px 5px 3px orange;
     }
-    .cln-1{
-        text-align: justify;
-        columns: 2;
-        
+    .meal-card:hover {
+      transform: translateY(-10px);
     }
-    .cln-2{
-        text-align: justify;
-        columns: 2;
+    .meal-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
     }
-    .text-box{
-        text-indent: 10px;
-        background: linear-gradient(240deg,rgba(182, 180, 180,0.5),rgba(255, 255, 255));
-        color:rgb(0, 0, 0) ;
-        border-radius: 15px;
-        box-shadow: 3px 3px 5px rgb(107, 103, 103);
-        padding: 10px;
+    .meal-card h2 {
+      font-size: 1.5rem;
+      margin: 15px 0;
+      color: #333;
     }
-    .image{
-    border-radius: 15px;
-    padding-left: 150px;
+    .meal-card p {
+      font-size: 1rem;
+      color: #666;
+      padding: 0 15px 15px;
     }
-</style>
-<body style="color:rgb(0, 0, 0);">
-    <h2><b>Cooking: An Art, A Science, and A Joy</b></h2>
-    <p>Cooking is both an essential life skill and a form of creative expression. Whether you're making a simple meal for yourself or preparing a grand feast for loved ones, the act of cooking connects us to our culture, our history, and ourselves. Here's a closer look at why cooking is so important and why it continues to captivate people around the world.</p>
-    <div class="cln-1">
-        <div class="text-box">
-        <h3><b>1. The Science of Cooking</b></h3>
-    <p>Cooking is rooted in scientific principles, involving chemistry, physics, and biology.</p>
-    <h3><b>2. Cooking as an Expression of Creativity</b></h3>
-    <p>Cooking offers endless possibilities for experimentation with ingredients, flavors, and presentation.</p>
+  </style>
+</head>
+
+<body>
+    <div class="heading"></div>
+  <div class="meal-container">
+   
+    <div class="meal-card">
+      <img src="https://www.simplyrecipes.com/thmb/CcPCFCDEvn1zKF7bcN2SpIqJmEs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__04__Freezer-Breakfast-Burritos-LEAD-1-531741f1b8c54ad6b3b89e199f6b70b8.jpg">
+      <h2>Breakfast</h2>
+      <p>If a hearty breakfast is what you need but taking the time to make one each morning is tough, make a batch of these and you'll have 8 filling breakfasts at your fingertips. These burritos are full of sausage, potatoes, eggs, cheese, and salsa verde. </p>
+    </div><br>
+
+   
+    <div class="meal-card">
+      <img src="https://www.simplyrecipes.com/thmb/5xLJ_WqvDbX6v1P3oh8OD8hpG58=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__02__mug-omelette-horiz-c2-1800-11ba46e6994348eabfc7467045716fb0.jpg">
+      <h2>Breakfast</h2>
+      <p>This isn't a make-ahead breakfast, but it's so quick to microwave a light and fluffy omlette in just 4 minutes. You can even skip the in the chopped veggies and shredded cheese.</p>
+    </div><br>
+
+    <div class="meal-card">
+      <img src="https://www.simplyrecipes.com/thmb/MUdm6_88B10ZFV5sJuZS-ti9UIE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__12__mini-muffin-frittatas-horiz-a-1800-510d83219fc74f1ca39f7ce87a64bbc8.jpg">
+      <h2>Breakfast</h2>
+      <P>Similar to egg bites, these mini frittatas baked in mini muffin tins will make nourishing yourself and your family in the morning a breeze. Filled with eggs, feta cheese, mushrooms, onions, and Swiss chard, you'll enjoy these tasty little frittatas for days on end.</P>
     </div>
-    <br>    <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZxLCcgAEowoTnf_65Kvxa708Ko771XUjgDw&s"; width="300px">
+  </div>
+  </section><br>
+  <br>
+
+<div class="meal-container">
+   
+    <div class="meal-card">
+      <img src="https://www.simplyrecipes.com/thmb/CcPCFCDEvn1zKF7bcN2SpIqJmEs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2018__04__Freezer-Breakfast-Burritos-LEAD-1-531741f1b8c54ad6b3b89e199f6b70b8.jpg">
+      <h2>Breakfast</h2>
+      <p>If a hearty breakfast is what you need but taking the time to make one each morning is tough, make a batch of these and you'll have 8 filling breakfasts at your fingertips. These burritos are full of sausage, potatoes, eggs, cheese, and salsa verde. Wrap each burrito in foil and freeze for up to 3 months. To heat, unwrap a burrito from the foil and microwave for 4 to 5 minutes.</p>
     </div>
-    <div class="cln-2">
-     <br>   <img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfR1lt2xdB_qAomDwcNPctZZ-yD-mZjKhnPQ&s"; width="300px">
-    <div class="text-box">
-            <h3><b>3. A Connection to Culture and Tradition</b></h3>
-            <p>Recipes are often passed down through generations, serving as a bridge to cultural heritage.</p>
-    <h3><b>4. Cooking as Self-Care and Wellness</b></h3>
-    <p>Preparing meals can be therapeutic, offering a sense of accomplishment and mindfulness.</p>
+
+   
+    <div class="meal-card">
+      <img src="https://www.simplyrecipes.com/thmb/5xLJ_WqvDbX6v1P3oh8OD8hpG58=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2017__02__mug-omelette-horiz-c2-1800-11ba46e6994348eabfc7467045716fb0.jpg">
+      <h2>Breakfast</h2>
+      <p>This isn't a make-ahead breakfast, but it's so quick to microwave a light and fluffy omlette in just 4 minutes. You can even skip the in the chopped veggies and shredded cheese.</p>
     </div>
+
+    <div class="meal-card">
+      <img src="https://www.simplyrecipes.com/thmb/MUdm6_88B10ZFV5sJuZS-ti9UIE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2013__12__mini-muffin-frittatas-horiz-a-1800-510d83219fc74f1ca39f7ce87a64bbc8.jpg">
+      <h2>Breakfast</h2>
+      <P>Similar to egg bites, these mini frittatas baked in mini muffin tins will make nourishing yourself and your family in the morning a breeze. Filled with eggs, feta cheese, mushrooms, onions, and Swiss chard, you'll enjoy these tasty little frittatas for days on end.</P>
     </div>
-    <h3><b>5. The Social Aspect of Cooking</b></h3>
-    <p>Sharing meals fosters relationships and builds community bonds.</p>
-    <hr>
-    <p>In short, cooking is not just about making meals — it's about connecting with people, expressing creativity, enhancing health, and celebrating traditions. Whether you're a seasoned chef or a beginner, the kitchen offers endless possibilities to learn, grow, and enjoy the process of creating something meaningful with your own hands.</p>
+  </div>  
 </body>
 </html>
 

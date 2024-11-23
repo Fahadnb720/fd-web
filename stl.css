@@ -99,9 +99,11 @@ ul li a{
     color: #ffffff;
     margin: 0px;
     padding: 20px;
-    
+    display: flex;
 }
-body{
+.footer cln-2-1{}
+
+body{ 
     text-align: justify;
     margin: 20px;
 }
