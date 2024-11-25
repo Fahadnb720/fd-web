@@ -19,7 +19,7 @@ const loginLink=document.querySelector('.menu-button,li:nth-child(1)');
     }); 
     
        
-});    
+    
 window.onload = function () {
     // Get the elements
     const heroHeading = document.querySelector('.IR-large');
