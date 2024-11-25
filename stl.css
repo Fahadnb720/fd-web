@@ -1,6 +1,6 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(0, 0, 0);
+    color: #ff5722;
     background-size: cover;
     
 }
@@ -64,36 +64,39 @@ ul li a{
 
 .card-container{
     display: flex;
-    height: 2px;
-    margin: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
+    align-items: stretch;
+    padding: 50px 20px;
     
 }
 
 .cards {
-    padding: 8px;
-    margin: 10px;
-    width: 2900px;
-    height: 230px;
-    border: 5px transparent rgb(0, 0, 0);
-    border-radius: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 400px;
     text-align: center;
-    box-shadow: 3px 3px 5px rgb(134, 134, 134);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
 
 .cards h3 {
-    color: rgb(1, 2, 2);
-    height: 30%;
-    width: 100%;
-    padding-bottom: 30;
-    align-content: center;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ff5722;
 }
 
 .cards p {
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    border-top: 1px solid white;
-    
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 15px;
 }
 .footer{
     page-break-after: always;
@@ -129,7 +132,7 @@ p{
 }
 .text-box{
     text-indent: 10px;
-    color:rgb(0, 0, 0) ;
+    color:#ff5722 ;
     border-radius: 15px;
     box-shadow: 3px 3px 5px rgb(107, 103, 103);
     padding: 10px;
