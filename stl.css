@@ -12,7 +12,8 @@ body{
 }
 
 .navbar {
-    border: 5px solid green;
+    border: 5px solid #ff5722;
+    border-radius: 5px;
     display: block;
     top: 10px;
     padding: 40px;
@@ -54,7 +55,7 @@ ul li a{
     font-size: 25px;
     margin-bottom: 15px;
     text-decoration: none;
-    color: rgb(40, 223, 23);
+    color: #ff5722;
     width: 100px;
     height: 30px;
     border-radius: 15px;
@@ -101,7 +102,7 @@ ul li a{
     margin: 0px;
     padding: 20px;
     display: flex;
-    
+    columns: 3;
 }
 .cln-2-2{
     columns: 2;
