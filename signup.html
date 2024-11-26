@@ -3,95 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Professional Sign-Up Form</title>
     <style>
+        /* General Reset */
         * {
-            margin:0;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
+
+        /* Body Styling */
         body {
-            background: linear-gradient(135deg,rgb(0, 0, 0) 10%,white 80%,green 10%);
+            background: linear-gradient(120deg, #4caf50, #81c784);
             background-size: cover;
-            height: 95vh;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
         }
 
+        /* Form Container */
         .form-container {
-            display: block;
-            margin: 50px auto;
-            background: rgba(241, 237, 237, 0.5);
-            padding: 20px;
-            width: 500px;
-            border: 5px solid rgb(0, 0, 0);
-            border-radius: 20px;
-        }
-
-        h2{
+            background: #fff;
+            padding: 30px;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
-            padding: 10px;
-            color: rgb(11, 14, 11)
         }
 
+        /* Form Header */
+        .form-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
 
-        .form-container label{
+        /* Form Labels */
+        .form-container label {
             display: block;
-            margin: 10px 0px;
+            text-align: left;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
         }
 
-        input{
+        /* Input Fields */
+        .form-container input {
             width: 100%;
-            height: 2rem;
-            padding: 5px;
-            border: 1px solid rgb(14, 13, 13);
-            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
         }
 
-        form button {
-            display: block;
-            width: 30%;
-            height: 2rem;
-            text-align: center;
-            margin: 20px 160px;
-            border: 2px solid white;
-            border-radius: 10px;
-            justify-self: center;
-            box-shadow: 3px 3px 5px rgb(103, 103, 103),5px 5px 5px rgb(255, 255, 255) inset;
+        /* Focus Effects */
+        .form-container input:focus {
+            border-color: #4caf50;
+            outline: none;
         }
 
-        p {
-            text-align: center;
+        /* Sign-Up Button */
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #4caf50;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button Hover Effect */
+        .form-container button:hover {
+            background: #388e3c;
+        }
+
+        /* Login Link */
+        .form-container p {
+            margin-top: 15px;
             font-size: 14px;
         }
-        
-        p a {
+
+        .form-container p a {
             text-decoration: none;
-            color: green;
+            color: #4caf50;
+            font-weight: bold;
         }
 
+        .form-container p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Error Message */
+        .error {
+            color: #d32f2f;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: none;
+        }
     </style>
-    <title>InitRabbit - Login</title>
 </head>
 <body>
     <div class="form-container">
-
-        <form action="submit" class="sign-up-form">
-            <h2>SIGN IN to Channel</h2>
+        <form id="signUpForm">
+            <h2>Sign Up to Channel</h2>
+            <div class="error" id="errorMessage">Please fill in all fields correctly.</div>
             <label for="name">Name</label>
-            <input type="text" placeholder="Enter your full name">
-            <label for="email">Email Id</label>
-            <input type='email' placeholder="Enter your email Id"></input>
-            <label for="password">Enter your password</label>
-            <input type='password' placeholder="Enter your password"></input>
-            <label for="password">Confirm your password</label>
-            <input type='password' placeholder="password"></input>
-            <button>Sign-Up</button>
+            <input type="text" id="name" placeholder="Enter your full name">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Confirm your password">
+            <button type="submit">Sign-Up</button>
             <p>Already have an account? <a href="login.html">Log In</a></p>
         </form>
-        
-        
     </div>
-    
 
+    <script>
+        // JavaScript to handle form validation
+        const signUpForm = document.getElementById('signUpForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        signUpForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const confirmPassword = document.getElementById('confirmPassword').value.trim();
+
+            if (!name || !email || !password || !confirmPassword) {
+                errorMessage.textContent = 'All fields are required.';
+                errorMessage.style.display = 'block';
+            } else if (password !== confirmPassword) {
+                errorMessage.textContent = 'Passwords do not match.';
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+                alert('Sign-Up Successful!');
+            }
+        });
+    </script>
 </body>
 </html>

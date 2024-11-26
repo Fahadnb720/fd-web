@@ -36,6 +36,7 @@ body{
     padding: 15px;
 
 }
+
 ul {
     display: flex;
 }
@@ -62,57 +63,112 @@ ul li a{
     font-family: 'Roboto',sans-serif;
 }
 
-.card-container{
+/* Container for all cards */
+.card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     align-items: stretch;
     padding: 50px 20px;
-    
+    background-color: #f9f9f9; /* Light background for contrast */
+    box-sizing: border-box;
 }
 
+/* Individual card styles */
 .cards {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    height: 400px;
+    background: #fff; /* White background for cards */
+    border-radius: 15px; /* Smoother corner radius */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    width: 280px; /* Reduced width for compactness */
+    max-width: 100%;
+    height: auto; /* Allow height to adjust dynamically */
+    overflow: hidden; /* Clip content to border radius */
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Hover effect for cards */
 .cards:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-
-
-.cards h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-    color: #ff5722;
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
+/* Card title styling */
+.cards h3 {
+    font-size: 1.6rem; /* Slightly larger font size */
+    margin: 20px 0 10px; /* More balanced spacing */
+    color: #ff5722; /* Vibrant orange for emphasis */
+    font-family: 'Arial', sans-serif; /* Clear and modern font */
+}
+
+/* Card paragraph styling */
 .cards p {
     font-size: 1rem;
-    color: #555;
-    padding: 0 15px 15px;
+    color: #666; /* Softer text color */
+    padding: 0 20px 20px; /* Adjusted padding for better spacing */
+    line-height: 1.6; /* Improved readability */
 }
-.footer{
-    page-break-after: always;
-    background-color: black;
-    color: #ffffff;
-    margin: 0px;
-    padding: 20px;
-    display: flex;
-    columns: 3;
+
+/* Add support for card images if necessary */
+.cards img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover; /* Maintain aspect ratio */
 }
-.cln-2-2{
-    columns: 2;
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center;
+        padding: 20px; /* Reduce padding for smaller viewports */
+    }
+
+    .cards {
+        width: 90%; /* Use most of the screen width */
+    }
 }
-.cln-2-1{
-    align-content: right;
+
+/* Footer container */
+/* Footer styling */
+.footer {
+    background-color: #333; /* Dark background for contrast */
+    color: #f5f5f5; /* Light text for readability */
+    text-align: center; /* Center the text horizontally */
+    padding: 15px 20px; /* Add some padding for spacing */
+    font-family: 'Arial', sans-serif; /* Clean font style */
+    font-size: 1rem; /* Adjust font size */
+    border-top: 3px solid #ff5722; /* Optional top border for style */
+    box-sizing: border-box;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.9rem; /* Slightly smaller font on smaller screens */
+    }
+}
+
+
+/* Column 1: Contact info */
+
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cln-1-1, .cln-2-1 {
+        width: 100%;
+    }
+}
+
 
 body{ 
     text-align: justify;
@@ -183,3 +239,152 @@ padding-left: 150px;
     color: #555;
     padding: 0 15px 15px;
   }
+/* General reset */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #ff5722; /* Orange color */
+    background-image: url("c:/Users/OWNER/Downloads/download-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* Row and title styling */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title {
+    font-size: 40px;
+    color: white;
+    font-family: cursive;
+    text-indent: 20px;
+    margin: 0;
+}
+
+/* Menu styling */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-button li {
+    display: inline;
+}
+
+.menu-button a {
+    text-decoration: none;
+    color: #ff5722;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+/* Hover effects */
+.menu-button a:hover {
+    background-color: #e64a19; /* Darker orange */
+    color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 30px;
+    }
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+    min-height: 200vh; /* For scroll demonstration */
+}
+
+/* Navbar Styling */
+.navbar {
+    position: sticky;
+    top: 0; /* Sticks to the top of the page */
+    z-index: 1000; /* Ensures the navbar is on top */
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text for good contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: #333; /* Dark text color for logo */
+    font-family: 'Cursive', sans-serif;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff5722; /* Standard dark text */
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color:#ffffff ; /* Change color to blue on hover */
+    text-shadow: 0 0 5px rgba(238, 230, 230, 0.8); /* Subtle glow effect */
+}
+
+/* Content Styling */
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.content h1 {
+    color: #333;
+}
+
+.content p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}

@@ -3,94 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Professional Login Form</title>
     <style>
+        /* General Reset */
         * {
-            margin:0;
-            padding: 0px;
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
+
+        /* Body Styling */
         body {
-            background: linear-gradient(45deg,rgb(0, 0, 0) 10%,white 80%,rgb(16, 134, 16) 10%);
+            background: linear-gradient(120deg, #ff5722, #ffc107);
             background-size: cover;
-            height: 95vh;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
         }
 
+        /* Form Container */
         .form-container {
-            display: block;
-            margin: 50px auto;
-            background: rgba(253, 255, 253, 0.651);
-            padding: 20px;
-            width: 500px;
-            border: 5px solid rgb(0, 0, 0);
-            border-radius: 20px;
-        }
-
-        h2{
+            background: #fff;
+            padding: 30px;
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
-            padding: 10px;
-            color: rgba(18, 19, 19, 0.658)
         }
 
+        /* Form Header */
+        .form-container h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
 
-        .form-container label{
+        /* Form Labels */
+        .form-container label {
             display: block;
-            margin: 10px 0px;
+            text-align: left;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
         }
 
-        input{
+        /* Input Fields */
+        .form-container input {
             width: 100%;
-            height: 2rem;
-            padding: 5px;
-            border: 1px solid rgb(3, 3, 3);
-            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
         }
 
-        form button {
-            
-            display: block;
-            width: 30%;
-            height: 2rem;
-            text-align: center;
-            margin: 20px 160px;
-            border: 2px solid white;
-            border-radius: 10px;
-            justify-self: center;
-            box-shadow: 3px 3px 5px rgb(103, 103, 103),5px 5px 5px rgb(255, 255, 255) inset;
+        /* Focus Effects */
+        .form-container input:focus {
+            border-color: #ff5722;
+            outline: none;
         }
 
-        p {
-            text-align: center;
+        /* Login Button */
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #ff5722;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button Hover Effect */
+        .form-container button:hover {
+            background: #e64a19;
+        }
+
+        /* Signup Link */
+        .form-container p {
+            margin-top: 15px;
             font-size: 14px;
         }
 
-        p a {
+        .form-container p a {
             text-decoration: none;
-            color: green;
+            color: #ff5722;
+            font-weight: bold;
         }
 
-        .sign-up-form {
+        .form-container p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Error Message */
+        .error {
+            color: #ff5722;
+            font-size: 14px;
+            margin-bottom: 15px;
             display: none;
         }
-
     </style>
-    <title>InitRabbit - Login</title>
 </head>
 <body>
     <div class="form-container">
-        <form action="submit" class="login-form">
-            <h2>LOGIN to Channel</h2>
-            <label for="email">Email Id</label>
-            <input type='email' placeholder="Enter your Email Id">
+        <form id="loginForm">
+            <h2>Login to Channel</h2>
+            <div class="error" id="errorMessage">Please fill in all fields.</div>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your Email Id">
             <label for="password">Password</label>
-            <input type='password' placeholder="Enter your password"></input>
-            <button>Login</button>
+            <input type="password" id="password" placeholder="Enter your password">
+            <button type="submit">Login</button>
             <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
         </form>
-        
     </div>
-    
 
+    <script>
+        // JavaScript to handle form validation
+        const loginForm = document.getElementById('loginForm');
+        const errorMessage = document.getElementById('errorMessage');
+
+        loginForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!email || !password) {
+                errorMessage.style.display = 'block'; // Show error message
+            } else {
+                errorMessage.style.display = 'none'; // Hide error message
+                alert('Login Successful!'); // Simulate successful login
+            }
+        });
+    </script>
 </body>
 </html>
